@@ -7,6 +7,7 @@ import { UpdateDvdComponent } from './update-dvd/update-dvd.component';
 import { InfoDvdComponent } from './info-dvd/info-dvd.component';
 import { HeaderComponent } from './header/header.component';
 import { ListDvdComponent } from './list-dvd/list-dvd.component';
+import { DvdComponent } from './dvd/dvd.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ListDvdComponent } from './list-dvd/list-dvd.component';
     UpdateDvdComponent,
     InfoDvdComponent,
     HeaderComponent,
-    ListDvdComponent
+    ListDvdComponent,
+    DvdComponent
   ],
   imports: [
     BrowserModule
