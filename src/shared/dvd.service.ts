@@ -16,4 +16,11 @@ export class DvdService {
   addDvd(data:any):Observable<any>{
     return this.http.post('/api/dvd' ,data);
   }
+  submit(form)
+  {
+    this.addDvd(form).subscribe(() =>{
+      this.router.navigate(['/dvds']);
+      console.log("dvd ajouter avec succee")
+    })
+  }
 }
