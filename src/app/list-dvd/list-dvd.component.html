@@ -1,5 +1,5 @@
 <h1>Dvd</h1>
-<button type="button" [routerLink]="['new']">Create new Dvd</button>
+<button type="button" [routerLink]="['add']">Create new Dvd</button>
 <br>
 <nav class="navbar">
   <input class="form-control" type="text" name="searchValue" [(ngModel)]="searchValue" placeholder="Enter Firstname to search">
@@ -37,5 +37,5 @@
   </tr>
 
 </table>
-<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
 
