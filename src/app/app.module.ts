@@ -8,6 +8,10 @@ import { InfoDvdComponent } from './info-dvd/info-dvd.component';
 import { HeaderComponent } from './header/header.component';
 import { ListDvdComponent } from './list-dvd/list-dvd.component';
 import { DvdComponent } from './dvd/dvd.component';
+import {RouterModule} from "@angular/router";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {AppRoutingModule} from "./app-routing.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +24,12 @@ import { DvdComponent } from './dvd/dvd.component';
     DvdComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
