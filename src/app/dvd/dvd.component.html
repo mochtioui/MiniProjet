@@ -27,6 +27,8 @@
 </td>
 <td>
   <button type="button" class="btn btn-danger" (click)="dvdService.deletedvd(dvd.id)">Remove</button>
+  <button type="button" class="btn btn-primary"  [routerLink]="[dvd.id]">Update</button>
+  <button type="button" class="btn btn-secondary" [routerLink]="['details',dvd.id]">Details</button>
 
 </td>
 

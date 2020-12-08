@@ -25,12 +25,12 @@ export class DvdService {
 
 
     addDvd(data:any):Observable<any>{
-      this.router.navigate(['add']);
+      this.router.navigate(['all']);
     return this.http.post('http://localhost:3000/dvd/' ,data);
   }
 
   getDvdById(id:number){
-    return this.http.get<Dvd>('/api/dvd/' +id);
+    return this.http.get<Dvd>('http://localhost:3000/dvd/' +id);
   }
 
  /* adddvd(any)
@@ -45,7 +45,7 @@ export class DvdService {
   */
 
   updateDvd( id:any, data:any){
-    return this.http.put<Dvd>('/api/dvd/' +id, data);
+    return this.http.put<Dvd>('http://localhost:3000/dvd/' +id, data);
 
   }
 

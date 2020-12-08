@@ -28,7 +28,7 @@ export class HeaderComponent implements OnInit {
     console.log(this.listagent);
     for (let i = 0; i < this.listagent.length; i++) {
       if ((this.listagent[i].login == log) && (this.listagent[i].mdp == mdp)) {
-        this.router.navigate(['add']);
+        this.router.navigate(['all']);
         this.test = true;
       }
 
