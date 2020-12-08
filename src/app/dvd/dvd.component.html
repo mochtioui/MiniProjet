@@ -1,0 +1,33 @@
+
+
+
+<td>
+{{dvd?.id}}
+
+</td>
+<td>
+  {{dvd?.title}}
+
+</td>
+<td>
+  {{dvd?.author}}
+
+</td>
+<td>
+  {{dvd?.price}}
+
+</td>
+<td>
+  {{dvd?.quantity}}
+
+</td>
+<td>
+  <img src="{{dvd?.fileSource}}" style="height: 100px; width:100px"/>
+
+</td>
+<td>
+  <button type="button" class="btn btn-danger" (click)="dvdService.deletedvd(dvd.id)">Remove</button>
+
+</td>
+
+

@@ -2,6 +2,8 @@ import {RouterModule, Routes} from "@angular/router";
 import {HeaderComponent} from "./header/header.component";
 import {NgModule} from "@angular/core";
 import {DvdComponent} from "./dvd/dvd.component";
+import {AddDvdComponent} from "./add-dvd/add-dvd.component";
+import {ListDvdComponent} from "./list-dvd/list-dvd.component";
 
 const routes: Routes = [
   {
@@ -9,7 +11,10 @@ const routes: Routes = [
 
   },
   {
-    path: 'add', component: DvdComponent
+    path: 'add', component: AddDvdComponent
+  },
+  {
+    path: 'all', component: ListDvdComponent
   }
 ];
 

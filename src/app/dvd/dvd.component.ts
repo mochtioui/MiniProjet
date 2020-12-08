@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {DvdService} from "../../shared/dvd.service";
 
 @Component({
   selector: 'app-dvd',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dvd.component.css']
 })
 export class DvdComponent implements OnInit {
+  @Input() dvd
 
-  constructor() { }
+  constructor(public dvdService: DvdService) {
+
+  }
 
   ngOnInit(): void {
   }
