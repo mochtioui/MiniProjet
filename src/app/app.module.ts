@@ -12,6 +12,7 @@ import {RouterModule} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
+import { DeleteDvdComponent } from './delete-dvd/delete-dvd.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {HttpClientModule} from "@angular/common/http";
     InfoDvdComponent,
     HeaderComponent,
     ListDvdComponent,
-    DvdComponent
+    DvdComponent,
+    DeleteDvdComponent
   ],
   imports: [
     BrowserModule,
