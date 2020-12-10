@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {DvdService} from "../../shared/dvd.service";
 import {Dvd} from "../../models/Dvd";
-import {DvdComponent} from "../dvd/dvd.component";
+
 
 @Component({
   selector: 'app-list-dvd',

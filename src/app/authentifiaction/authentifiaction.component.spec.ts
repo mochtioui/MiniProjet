@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DvdComponent } from './dvd.component';
+import { AuthentifiactionComponent } from './authentifiaction.component';
 
-describe('DvdComponent', () => {
-  let component: DvdComponent;
-  let fixture: ComponentFixture<DvdComponent>;
+describe('AuthentifiactionComponent', () => {
+  let component: AuthentifiactionComponent;
+  let fixture: ComponentFixture<AuthentifiactionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DvdComponent ]
+      declarations: [ AuthentifiactionComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DvdComponent);
+    fixture = TestBed.createComponent(AuthentifiactionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

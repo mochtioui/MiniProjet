@@ -2,10 +2,7 @@
 <div >
   <h1>Modify Dvd</h1>
   <form [formGroup]="form" (ngSubmit)="modifyDvd()" class="modifcol">
-    <div class="form-group">
-      <label>Id</label>
-      <input type="text" formControlName="id" class="form-control" >
-    </div>
+
     <div class="form-group">
       <label>Title</label>
       <input class="form-control" formControlName="title">
@@ -29,8 +26,8 @@
     </div>
     <img [src]="imageSrc" *ngIf="imageSrc" style="height: 100px; width:100px">
 
-<br> <br>
-    <center>   <button class="btn btn-outline-light"  type="submit">Submit</button> </center>
+<br> <br><br> <br>
+     <button class="btn btn-outline-light"  type="submit">Submit</button>
   </form>
 </div>
 </body>

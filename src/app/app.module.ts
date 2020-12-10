@@ -7,7 +7,7 @@ import { UpdateDvdComponent } from './update-dvd/update-dvd.component';
 import { InfoDvdComponent } from './info-dvd/info-dvd.component';
 import { HeaderComponent } from './header/header.component';
 import { ListDvdComponent } from './list-dvd/list-dvd.component';
-import { DvdComponent } from './dvd/dvd.component';
+
 import {RouterModule} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./app-routing.module";
@@ -16,6 +16,7 @@ import { DeleteDvdComponent } from './delete-dvd/delete-dvd.component';
 import {NgOrderByPipeModule} from "angular-pipes";
 import {NgxPaginationModule} from "ngx-pagination";
 import { TopbarComponent } from './topbar/topbar.component';
+import { AuthentifiactionComponent } from './authentifiaction/authentifiaction.component';
 
 
 @NgModule({
@@ -26,9 +27,10 @@ import { TopbarComponent } from './topbar/topbar.component';
     InfoDvdComponent,
     HeaderComponent,
     ListDvdComponent,
-    DvdComponent,
+
     DeleteDvdComponent,
-    TopbarComponent
+    TopbarComponent,
+    AuthentifiactionComponent
   ],
   imports: [
     BrowserModule,

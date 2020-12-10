@@ -1,7 +1,7 @@
 import {RouterModule, Routes} from "@angular/router";
 import {HeaderComponent} from "./header/header.component";
 import {NgModule} from "@angular/core";
-import {DvdComponent} from "./dvd/dvd.component";
+
 import {AddDvdComponent} from "./add-dvd/add-dvd.component";
 import {ListDvdComponent} from "./list-dvd/list-dvd.component";
 import {UpdateDvdComponent} from "./update-dvd/update-dvd.component";
@@ -23,9 +23,12 @@ const routes: Routes = [
   },
 
   { path: 'update/:id', component: UpdateDvdComponent },
-  { path: 'home', component: DvdComponent },
-  { path: 'details/:id', component: InfoDvdComponent },
 
+  { path: 'details/:id', component: InfoDvdComponent },
+  {
+
+    path: 'home', component: ListDvdComponent
+  },
   {
 
     path: 'all', component: ListDvdComponent
