@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {DvdService} from "../../shared/dvd.service";
+import {Dvd} from "../../models/Dvd";
+import {DvdComponent} from "../dvd/dvd.component";
 
 @Component({
   selector: 'app-list-dvd',
@@ -7,16 +9,20 @@ import {DvdService} from "../../shared/dvd.service";
   styleUrls: ['./list-dvd.component.css']
 })
 export class ListDvdComponent implements OnInit {
+  @Input() dvd
+  @Input() index;
+
+
   dvds;
   searchValue: string;
+  title;
   p:number=1;
-  constructor(private dvdService: DvdService) { }
+
+  constructor(public dvdService: DvdService) { }
 
   ngOnInit(): void {
     this.dvdService.getAllDvds().subscribe((data)=>{
-      this.dvds=data;console.log(this.dvds)
-
-    }),
+      this.dvds=data;console.log(this.dvds)}),
       errors =>{
         console.log(errors);
       }
@@ -29,5 +35,16 @@ export class ListDvdComponent implements OnInit {
 
   }
 
+  searchTitle(): void {
+    this.dvdService.findByTitle(this.title)
+      .subscribe(
+        data => {
+          this.dvds = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
 
 }

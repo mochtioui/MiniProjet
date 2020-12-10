@@ -1,41 +1,91 @@
-<h1>Dvd</h1>
-<button class="btn btn-danger" type="button" [routerLink]="['add']">Create new Dvd</button>
+<fieldset>
 <br>
-<nav class="navbar">
-  <input class="form-control" type="text" name="searchValue" [(ngModel)]="searchValue" placeholder="Enter Firstname to search">
-</nav>
 
-<table border="1" class="table table-bordered" class="text-lg-center">
+<br><br>
+<button type="button" class="btn btn-outline-light"  [routerLink]="['add']">Add Dvd</button>
+<br>
+<br>
+<br>
+
+
+  <div  class="input-group mb-3">
+
+    <input   type="text" class="form-control" placeholder="Search by title" [(ngModel)]="title" />
+
+    <div class="input-group-append">
+
+      <button class="btn btn-outline-light" type="button" (click)="searchTitle()">
+        Search
+      </button>
+
+    </div>
+
+  </div>
+
+  <table  class="table table-hover mx-8" *ngIf="dvds"  >
+  <thead class="thead-dark">
+
 
 
   <tr>
-    <td (click)="sort('id')">
-      id&nbsp;
-      <i class="fa fa-sort"></i>
-    </td>
+
     <td (click)="sort('title')">
-      title&nbsp;
+      Title&nbsp;
       <i class="fa fa-sort"></i>
 
     </td>
     <td>
-      author
+      Director
+
     </td>
     <td>
-      price
+      Price
     </td>
     <td>
-      quantity
+      Quantity
     </td>
     <td>
-      image
+      Cover
     </td>
 
     <td>
-      action
+      Actions
     </td>
   </tr>
+  </thead>
+
+  <tr  *ngFor="let dvd of dvds" class="modifcol"   >
+  <td>
+    {{dvd?.title}}
+
+  </td>
+  <td>
+    {{dvd?.author}}
+
+  </td>
+  <td>
+    {{dvd?.price}}
+
+  </td>
+  <td>
+    {{dvd?.quantity}}
+
+  </td>
+  <td>
+    <img src="{{dvd?.fileSource}}" style="height: 100px; width:100px"/>
+
+  </td>
+  <td>
+    <button type="button" class="btn btn-danger" [routerLink]="['/reload',dvd.id]">Remove</button>
+  
+    <button type="button" class="btn btn-primary"  [routerLink]="['/update',dvd.id]">Update</button>
+
+    <button type="button" class="btn btn-secondary" [routerLink]="['/details',dvd.id]">Details</button>
+  </td>
+
+</tr>
+
 
 </table>
 
-
+</fieldset>

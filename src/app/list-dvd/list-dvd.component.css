@@ -1,0 +1,19 @@
+fieldset{
+  color: white;
+  background-color: #68A5B6;
+}
+.mod{
+  font-size: 12px;
+}
+.modifcol
+{color: whitesmoke;
+  background: linear-gradient(to bottom right, #2D788D, white)
+
+}
+.couleur{
+  background-color: #98B3BB !important;
+
+}
+body{
+  background: linear-gradient(to bottom right, #2D788D, white)
+}

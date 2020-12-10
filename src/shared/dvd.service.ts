@@ -1,9 +1,10 @@
 import {Injectable} from "@angular/core";
 import {FormGroup} from "@angular/forms";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Observable} from "rxjs";
 import {Dvd} from "../models/Dvd";
+
 
 @Injectable(
   {
@@ -12,27 +13,58 @@ import {Dvd} from "../models/Dvd";
 )
 export class DvdService {
   form: FormGroup;
+  dvds;
+  //DvdUrl: string = 'http://localhost:3000/dvd/';
   constructor(private http: HttpClient,private router: Router,private route: ActivatedRoute) {
   }
+
+  /*
+  listdvds: dvd[];
+  getdvds() {
+    return this.http.get<dvd[]>(this.DvdUrl);
+  }
+
+  public afficherdvds() {
+
+    this.getdvds().subscribe(
+      (data) => {
+        this.listclients = data;
+        console.log(this.listclients);
+        this.nbr = 0;
+        for (let i = 0; i < this.listclients.length; i++) {
+          this.nbr++;
+        }
+      }
+    );
+  }
+*/
+
 
   getAllDvds(){
     return this.http.get<Dvd[]>('http://localhost:3000/dvd/');
   }
-  deleteDvd(id:number) {
-    return this.http.delete('http://localhost:3000/dvd/' + id);
-  }
-
-
-
-    addDvd(data:any):Observable<any>{
-      this.router.navigate(['all']);
-    return this.http.post('http://localhost:3000/dvd/' ,data);
-  }
-
   getDvdById(id:number){
     return this.http.get<Dvd>('http://localhost:3000/dvd/' +id);
   }
 
+  deleteDvd(id:number) {
+    return this.http.delete('http://localhost:3000/dvd/' + id);
+  }
+
+    addDvd(data:any):Observable<any>{
+      this.router.navigate(['all']);
+    return this.http.post('http://localhost:3000/dvd/' ,data);
+     }
+
+     updateDvd( id:any, data:any){
+    return this.http.put<Dvd>('http://localhost:3000/dvd/' +id, data);
+
+    }
+
+  findByTitle(title: string): Observable<any> {
+    let params1 = new HttpParams().set('title',title);
+    return this.http.get('http://localhost:3000/dvd/',{params:params1});
+  }
  /* adddvd(any)
   {
     this.addDvd(any).subscribe(()=>{
@@ -43,15 +75,20 @@ export class DvdService {
 }
 
   */
+  getDvds(){
+    this.getAllDvds().subscribe((data)=>{
+      this.dvds=data;console.log(this.dvds)
 
-  updateDvd( id:any, data:any){
-    return this.http.put<Dvd>('http://localhost:3000/dvd/' +id, data);
-
+    }),
+      errors =>{
+        console.log(errors);
+      }
   }
+
 
   deletedvd(id){
     this.deleteDvd(id).subscribe(()=>{
-      this.router.navigate(['http://localhost:3000/dvd']);
+      this.router.navigate(['/all']);
       console.log("deleted");
     });
   }

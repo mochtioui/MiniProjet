@@ -6,12 +6,15 @@ import {AddDvdComponent} from "./add-dvd/add-dvd.component";
 import {ListDvdComponent} from "./list-dvd/list-dvd.component";
 import {UpdateDvdComponent} from "./update-dvd/update-dvd.component";
 import {InfoDvdComponent} from "./info-dvd/info-dvd.component";
+import {DeleteDvdComponent} from "./delete-dvd/delete-dvd.component";
+
 
 const routes: Routes = [
   {
     path: '', component: HeaderComponent
 
   },
+  { path: 'reload/:id', component: DeleteDvdComponent },
   {
     path: 'add', component: AddDvdComponent
   },
@@ -22,6 +25,7 @@ const routes: Routes = [
   { path: 'update/:id', component: UpdateDvdComponent },
   { path: 'home', component: DvdComponent },
   { path: 'details/:id', component: InfoDvdComponent },
+
   {
 
     path: 'all', component: ListDvdComponent

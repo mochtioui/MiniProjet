@@ -8,6 +8,8 @@ import {DvdService} from "../../shared/dvd.service";
 })
 export class DvdComponent implements OnInit {
   @Input() dvd
+  @Input() index;
+  dvds;
 
   constructor(public dvdService: DvdService) {
 

@@ -13,6 +13,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AppRoutingModule} from "./app-routing.module";
 import {HttpClientModule} from "@angular/common/http";
 import { DeleteDvdComponent } from './delete-dvd/delete-dvd.component';
+import {NgOrderByPipeModule} from "angular-pipes";
+import {NgxPaginationModule} from "ngx-pagination";
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { DeleteDvdComponent } from './delete-dvd/delete-dvd.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgOrderByPipeModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
