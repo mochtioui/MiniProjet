@@ -1,25 +1,26 @@
 
+
 <div class="row" id="contentToPDF">
   <div class="col-xs-12">
-    <img src="{{dvd?.fileSource}}" style="height: 400px; width:400px"/>
+     <img src="{{dvd?.fileSource}}" style="height: 400px; width:400px"/>
 
 
-    <h1>  titre  : {{dvd?.title}} </h1>
+    <h1>  Title  : {{dvd?.title}} </h1>
 
-    <h2>  Nom d'auteur  :{{dvd?.author}}</h2>
+    <h2>  Director  :{{dvd?.author}}</h2>
 
-    <h3> Prix :{{dvd?.price}}</h3>
+    <h3> Price :{{dvd?.price}}</h3>
 
-    <h3>Quantité  : {{dvd?.quantity}}</h3>
+    <h3>Quantity  : {{dvd?.quantity}}</h3>
 
 
   </div>
 
 </div>
+<center>
+<button class="btn btn-primary" (click)="onBack()">Back</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" (click)="downloadPDF()">Save As PDF</button>
 
-<button class="btn btn-primary" (click)="onBack()">Retour</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-primary" (click)="downloadPDF()">Export to PDF</button>
-
-
+</center>>
 
 
 

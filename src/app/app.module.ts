@@ -15,6 +15,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { DeleteDvdComponent } from './delete-dvd/delete-dvd.component';
 import {NgOrderByPipeModule} from "angular-pipes";
 import {NgxPaginationModule} from "ngx-pagination";
+import { TopbarComponent } from './topbar/topbar.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import {NgxPaginationModule} from "ngx-pagination";
     HeaderComponent,
     ListDvdComponent,
     DvdComponent,
-    DeleteDvdComponent
+    DeleteDvdComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,33 +1,36 @@
-<div>
+<body class="modifcol">
+<div >
   <h1>Modify Dvd</h1>
-  <form [formGroup]="form" (ngSubmit)="modifyDvd()">
+  <form [formGroup]="form" (ngSubmit)="modifyDvd()" class="modifcol">
     <div class="form-group">
       <label>Id</label>
       <input type="text" formControlName="id" class="form-control" >
     </div>
     <div class="form-group">
-      <label>title</label>
+      <label>Title</label>
       <input class="form-control" formControlName="title">
     </div>
     <div class="form-group">
-      <label>author</label>
+      <label>Director</label>
       <input type="text" formControlName="author" class="form-control">
     </div>
     <div class="form-group">
-      <label>price</label>
+      <label>Price</label>
       <input type="number" formControlName="price" class="form-control">
     </div>
     <div class="form-group">
-      <label>quantity</label>
+      <label>Quantity</label>
       <input type="number" formControlName="quantity" class="form-control">
     </div>
+    <br>
     <div class="form-group">
-      <label>image</label>
+      <label>Image      </label>
       <input id="file" type="file" formControlName="image" (change)="onFileChange($event)">
     </div>
     <img [src]="imageSrc" *ngIf="imageSrc" style="height: 100px; width:100px">
 
-
-    <button type="submit">Submit</button>
+<br> <br>
+    <center>   <button class="btn btn-outline-light"  type="submit">Submit</button> </center>
   </form>
 </div>
+</body>
