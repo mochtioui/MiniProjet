@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
       }
     );
   }
-
+  myimage: string = 'assets/images/netflix.jpg';
   log;
   mdp;
   test: boolean = false;
