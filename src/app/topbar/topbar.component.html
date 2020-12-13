@@ -1,20 +1,15 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li routerLinkActive="active">
+      <li routerLinkActive="active" *ngIf="isAuth"  >
         <a routerLink="all">Home</a>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li routerLinkActive="active" *ngIf="0">
-        <a routerLink="auth/signup">Crer un compte</a>
-      </li>
-      <li routerLinkActive="active" *ngIf="0">
-        <a routerLink="auth/signin">connexion</a>
 
-      </li>
+
       <li >
-        <a routerLink="" *ngIf="1" style="cursor:pointer">Deconnexion</a>
+        <a routerLink=""  *ngIf="!isAuth" style="cursor:pointer">Deconnexion</a>
 
       </li>
 

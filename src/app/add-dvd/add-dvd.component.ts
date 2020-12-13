@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {DvdService} from "../../shared/dvd.service";
 import {Router} from "@angular/router";
+import {FormsModule ,ReactiveFormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-add-dvd',
@@ -11,14 +12,15 @@ import {Router} from "@angular/router";
 export class AddDvdComponent implements OnInit {
   form: FormGroup;
   imageSrc: String;
+  title :String;
 
   constructor(public dvdService: DvdService, private router: Router, private fb: FormBuilder) {
 
-
+// Reactive form
   this.form = this.fb.group({
     id: [null, [Validators.required]],
     title: [null, [Validators.required]],
-    author: [null, [Validators.required]],
+    author: [null, [Validators.compose([Validators.required,Validators.pattern('^[a-zA-Z]')])]],
     price: [null, [Validators.required]],
     quantity: [null, [Validators.required]],
     image: [null, [Validators.required]],

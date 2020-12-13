@@ -2,7 +2,7 @@
 <body>
 <div class="mx-5" style="padding-left: 35% ;padding-top: 7%; position:relative;">
   <div class="my-5 mx-5">
-    <label for="exampleInputEmail1" style="font-weight: bold; font-size: 25px;">Login</label>
+    <label for="exampleInputEmail1" style="font-weight: bold; font-size: 25px;">Email</label>
     <input type="text" [(ngModel)]="log" class="form-control w-25 " id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
   </div>
   <div  class="mx-5">
@@ -10,7 +10,12 @@
     <input type="password" [(ngModel)]="mdp" class="form-control w-25" id="exampleInputPassword1" placeholder="Password">
   </div>
   <div style="padding-left: 4%">
-    <button type="submit" (click)="login(log,mdp)" class="btn btn-outline-light my-5 mx-5">Se Conecter</button>
+    <button type="submit" (click)="login(log,mdp)" class="btn btn-outline-light my-5 mx-5">Connecter</button>
+
+
   </div>
+  <div style="padding-left: 4%">
+  <button type="submit" (click)="signup()" class="btn btn-outline-light my-5 mx-5">Inscription</button>
+  </div>>
 </div>
 </body>

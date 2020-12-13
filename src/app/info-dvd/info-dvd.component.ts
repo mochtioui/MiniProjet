@@ -10,7 +10,7 @@ import * as html2pdf from 'html2pdf.js';
 })
 export class InfoDvdComponent implements OnInit {
   dvd;
-
+  myimage: string = 'assets/images/aa.jpg';
   constructor(private route: ActivatedRoute,private router: Router, public bookService:DvdService) { }
 
   ngOnInit(): void {

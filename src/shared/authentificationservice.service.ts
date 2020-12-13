@@ -2,6 +2,7 @@ import {Injectable} from "@angular/core";
 import {ActivatedRoute, Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 import {agent} from "../models/agent";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -25,10 +26,10 @@ export class AuthentificationserviceService {
   mdp;
   test: boolean = false;
 
-  public login(log, mdp) {
+  public login() {
     console.log(this.listagent);
     for (let i = 0; i < this.listagent.length; i++) {
-      if ((this.listagent[i].login == log) && (this.listagent[i].mdp == mdp)) {
+      if ((this.listagent[i].login == this.log) && (this.listagent[i].mdp == this.mdp)) {
         this.router.navigate(['acceuil']);
         this.test = true;
       }
@@ -39,6 +40,14 @@ export class AuthentificationserviceService {
     }
 
   }
+
+
+
+
+  createNewUser(data:any): Observable<any>{
+    return this.http.post('http://localhost:3000/agents/',data);
+  }
+
 
 
 }

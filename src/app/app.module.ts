@@ -16,7 +16,7 @@ import { DeleteDvdComponent } from './delete-dvd/delete-dvd.component';
 import {NgOrderByPipeModule} from "angular-pipes";
 import {NgxPaginationModule} from "ngx-pagination";
 import { TopbarComponent } from './topbar/topbar.component';
-import { AuthentifiactionComponent } from './authentifiaction/authentifiaction.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 @NgModule({
@@ -30,7 +30,8 @@ import { AuthentifiactionComponent } from './authentifiaction/authentifiaction.c
 
     DeleteDvdComponent,
     TopbarComponent,
-    AuthentifiactionComponent
+    SignUpComponent
+
   ],
   imports: [
     BrowserModule,
@@ -40,7 +41,8 @@ import { AuthentifiactionComponent } from './authentifiaction/authentifiaction.c
     HttpClientModule,
     ReactiveFormsModule,
     NgOrderByPipeModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

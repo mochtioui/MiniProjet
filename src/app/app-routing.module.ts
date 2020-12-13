@@ -7,6 +7,7 @@ import {ListDvdComponent} from "./list-dvd/list-dvd.component";
 import {UpdateDvdComponent} from "./update-dvd/update-dvd.component";
 import {InfoDvdComponent} from "./info-dvd/info-dvd.component";
 import {DeleteDvdComponent} from "./delete-dvd/delete-dvd.component";
+import {SignUpComponent} from "./sign-up/sign-up.component";
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'update/:id', component: UpdateDvdComponent },
 
   { path: 'details/:id', component: InfoDvdComponent },
+  { path: 'sginup', component: SignUpComponent },
   {
 
     path: 'home', component: ListDvdComponent

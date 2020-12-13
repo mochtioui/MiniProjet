@@ -39,6 +39,10 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  public signup() {
+    this.router.navigate(['sginup']);
+  }
+
 
   ngOnInit(): void {
   }

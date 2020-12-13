@@ -1,0 +1,40 @@
+<div><img src={{myimage}} style="position:absolute; opacity: 0.8;" class=" w-100 h-85 "></div>
+<div class="mx-5" style="padding-left: 35% ;padding-top: 7%; position:relative;">
+
+  <div class="col-sm-8 col-sm-offset-2">
+
+    <br>
+    <form #f="ngForm" (ngSubmit)="Submit(f)">
+      <div class="form-group">
+        <label style="font-weight: bold; font-size: 25px;" for="login">Email</label>
+        <input   class="form-control w-30 " id="login" type="text" required email ngModel name="login" #login="ngModel">
+        <div *ngIf="login.valid" class="alert alert-success">
+          email success
+        </div>
+        <div *ngIf="login.errors &&(login.touched || login.dirty)" class ="alert alert-danger">
+
+          Invalid email
+
+        </div>
+      </div>
+      <div class="form-group">
+        <label style="font-weight: bold; font-size: 25px;" for="mdp">Mot de passe</label>
+        <input  class="form-control w-30 " id="mdp" type="mdp" required minlength="8" ngModel name="mdp" #mdp="ngModel">
+        <div *ngIf="mdp.valid" class="alert alert-success">
+          Mot de passe success
+        </div>
+        <div *ngIf="mdp.invalid">
+          <div *ngIf="mdp.touched &&(mdp.touched || mdp.dirty)" class="alert alert-danger">
+            le mot de passe doit obtenir au minimum 8 caracteres
+          </div>
+
+        </div>
+
+      </div>
+      <br>
+      <button class="btn btn-primary" type="submit" [disabled]="f.invalid">Create new Account</button>
+
+    </form>
+    <p class="text-danger">{{errorMessage}}</p>
+  </div>
+</div>
