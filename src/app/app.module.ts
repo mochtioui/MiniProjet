@@ -17,7 +17,7 @@ import {NgOrderByPipeModule} from "angular-pipes";
 import {NgxPaginationModule} from "ngx-pagination";
 import { TopbarComponent } from './topbar/topbar.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { SearchfilterPipe } from './searchfilter.pipe';
+
 
 
 @NgModule({
@@ -31,8 +31,7 @@ import { SearchfilterPipe } from './searchfilter.pipe';
 
     DeleteDvdComponent,
     TopbarComponent,
-    SignUpComponent,
-    SearchfilterPipe
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

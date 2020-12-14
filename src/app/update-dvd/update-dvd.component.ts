@@ -32,6 +32,11 @@ export class UpdateDvdComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+
+  onBack(){
+    this.router.navigate(['/all']);
+  }
   onFileChange(event) {
 
     const reader = new FileReader();

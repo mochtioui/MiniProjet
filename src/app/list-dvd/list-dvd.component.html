@@ -2,6 +2,7 @@
 <fieldset>
 <br>
 
+
 <br><br>
 <button type="button" class="btn btn-outline-light"  [routerLink]="['add']">Add Dvd</button>
 <br>
@@ -22,6 +23,43 @@
     </div>
 
   </div>
+
+
+
+
+  <div  class="input-group mb-3">
+
+    <input   type="text" class="form-control w-25 mx-3 " placeholder="Search by Price" [(ngModel)]="price" />
+
+    <div class="input-group-append">
+
+      <button class="btn btn-outline-light" type="button" (click)="searchPrice()">
+        Search
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+
+  <div  class="input-group mb-3">
+
+    <input   type="text" class="form-control w-25 mx-3 " placeholder="Search by Director	" [(ngModel)]="author" />
+
+    <div class="input-group-append">
+
+      <button class="btn btn-outline-light" type="button" (click)="searchDirector()">
+        Search
+      </button>
+
+    </div>
+
+  </div>
+
+
+
 
   <table  class="table table-hover mx-8" *ngIf="dvds"  >
   <thead class="thead-dark">

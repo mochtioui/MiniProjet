@@ -29,6 +29,10 @@ export class AddDvdComponent implements OnInit {
 }
   ngOnInit(): void {
   }
+  onBack(){
+    this.router.navigate(['/all']);
+  }
+
 onFileChange(event){
     const reader = new FileReader();
     if (event.target.files && event.target.files.length)

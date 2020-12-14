@@ -19,13 +19,13 @@
       </div>
       <div class="form-group">
         <label style="font-weight: bold; font-size: 25px;" for="mdp">Mot de passe</label>
-        <input  class="form-control w-30 " id="mdp" type="mdp" required minlength="8" ngModel name="mdp" #mdp="ngModel">
+        <input  class="form-control w-30 " id="mdp" type="mdp" required minlength="4" ngModel name="mdp" #mdp="ngModel">
         <div *ngIf="mdp.valid" class="alert alert-success">
           Mot de passe success
         </div>
         <div *ngIf="mdp.invalid">
           <div *ngIf="mdp.touched &&(mdp.touched || mdp.dirty)" class="alert alert-danger">
-            le mot de passe doit obtenir au minimum 8 caracteres
+            le mot de passe doit obtenir au minimum 4 caracteres
           </div>
 
         </div>
