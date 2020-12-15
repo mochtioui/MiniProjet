@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {DvdService} from "../../shared/dvd.service";
 import {Dvd} from "../../models/Dvd";
 import {AuthentificationserviceService} from "../../shared/authentificationservice.service";
@@ -10,6 +10,8 @@ import {AuthentificationserviceService} from "../../shared/authentificationservi
   styleUrls: ['./list-dvd.component.css']
 })
 export class ListDvdComponent implements OnInit {
+
+  //input
   @Input() dvd
   @Input() index;
 
@@ -22,8 +24,15 @@ export class ListDvdComponent implements OnInit {
   p:number=1;
 
   constructor(public dvdService: DvdService) { }
+  // output
+  @Output() parent:EventEmitter<any> = new EventEmitter();
+
 
   ngOnInit(): void {
+
+    this.parent.emit("from child to parent");
+
+
     this.dvdService.getAllDvds().subscribe((data)=>{
       this.dvds=data;console.log(this.dvds)}),
       errors =>{

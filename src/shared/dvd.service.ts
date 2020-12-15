@@ -119,56 +119,5 @@ export class DvdService {
 
 
 
-  critere: string;
-  valeur;
-  indice: number;
-  idr;
-  nomr;
-  prenomr;
-  cinr;
-  numeror;
-  affichcl = false;
-
-
-
-
-  rechercheindice1(critere, valeur) {
-
-    console.log(this.dvds.length)
-    this.affichcl = !this.affichcl;
-    this.indice = -1;
-    for (let i = 0; i < this.dvds.length; i++) {
-      if ((critere == 'id') && (this.dvds[i].id == valeur)) {
-        this.indice = i;
-      }
-      if ((critere == 'title') && (this.dvds[i].title == valeur)) {
-        this.indice = i;
-      }
-      if ((critere == 'author') && (this.dvds[i].author == valeur)) {
-        this.indice = i;
-      }
-      if ((critere == 'price') && (this.dvds[i].price == valeur)) {
-        this.indice = i;
-      }
-      if ((critere == 'quantity') && (this.dvds[i].quantity == valeur)) {
-        this.indice = i;
-      }
-
-    }
-    console.log(this.indice);
-    if (this.indice != -1) {
-      this.idr = this.dvds[this.indice].id;
-      this.nomr = this.dvds[this.indice].title;
-      this.prenomr = this.dvds[this.indice].author;
-      this.cinr = this.dvds[this.indice].price;
-      this.numeror = this.dvds[this.indice].quantity;
-    } else {
-      this.affichcl = false;
-      alert('ce dvd n\'existe pas');
-    }
-  }
-
-
-
 
 }
