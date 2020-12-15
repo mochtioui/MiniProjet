@@ -18,7 +18,8 @@ export class UpdateDvdComponent implements OnInit {
     this.form = this.fb.group({
       id: [null, [Validators.required]],
       title: [null, [Validators.required]],
-      author: [null, [Validators.required]],
+      author: [null, [Validators.compose([Validators.required,Validators.pattern('^[a-zA-Z]')])]],
+
       price: [null, [Validators.required]],
       quantity: [null, [Validators.required]],
       image: [null, [Validators.required]],
